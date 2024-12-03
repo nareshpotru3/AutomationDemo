@@ -17,6 +17,7 @@ namespace AutomationDemo
                     Console.Write("*");
                 }
                 Console.WriteLine();
+
             }
         }
 
