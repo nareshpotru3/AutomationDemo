@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutomationDemo
+namespace AutomationDemo.CodingQuestions
 {
     internal class RevWordsInString
     {
@@ -30,7 +30,7 @@ namespace AutomationDemo
         }
         public static void Main(string[] args)
         {
-            ReverseWords("one two ther fo");
+            ReverseWords("one two three four");
         }
     }
 }

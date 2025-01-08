@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace AutomationDemo
+namespace AutomationDemo.Assignment
 {
     internal class YatraFlights
     {
@@ -25,10 +25,10 @@ namespace AutomationDemo
 
         }
 
-        public static void DeptDate(string dat1,string dat2)
+        public static void DeptDate(string dat1, string dat2)
         {
 
-            
+
             //From date
             DateTime inpdate = Convert.ToDateTime(dat1);
             DateTime currDate = DateTime.Now;
@@ -81,12 +81,12 @@ namespace AutomationDemo
             string monyrret = Mar + " " + yearret;
 
             driver.FindElement(By.XPath("//input[@placeholder='Return Date']")).Click();
-            
-            while(true)
+
+            while (true)
             {
                 Console.WriteLine(monyrret);
                 Console.WriteLine(monyrdisplay);
-                
+
                 if (inpdate <= retdate)
                 {
                     monyrdisplay = driver.FindElement(By.ClassName("js_monthTitle")).Text;
@@ -108,7 +108,7 @@ namespace AutomationDemo
                     break;
                 }
             }
-        }       
-    }   
+        }
+    }
 }
 

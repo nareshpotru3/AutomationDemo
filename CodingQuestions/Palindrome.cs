@@ -4,31 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AutomationDemo
+namespace AutomationDemo.CodingQuestions
 {
     internal class Palindrome
     {
-        public static void P1(string pal) 
+        public static void P1(string pal)
         {
             bool succ = true;
+            //Below 2 lines to check palindrome with out case sensetive
             //var pal1 = pal.ToUpper();
             //pal = pal1;
-            for (int i = 0, j = pal.Length - 1; i < pal.Length / 2; i++,j--)
+            for (int i = 0, j = pal.Length - 1; i < j; i++, j--)
             {
-                if(pal[i] != pal[j])
+                if (pal[i] != pal[j])
                 {
-                    succ = false; 
-                   break;
+                    succ = false;
+                    break;
                 }
 
             }
             if (succ)
                 Console.WriteLine("Given string is Palindrome");
-            else Console.WriteLine("Given string is not a palindrome");
+            else
+                Console.WriteLine("Given string is not a palindrome");
         }
         public static void Main(string[] args)
         {
-            P1("ABCDCBA");
+            P1("AB CdC BA");
         }
     }
 }

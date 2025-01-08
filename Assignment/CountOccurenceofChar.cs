@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using OpenQA.Selenium.DevTools.V128.Runtime;
 
-namespace AutomationDemo
+namespace AutomationDemo.Assignment
 {
     internal class CountOccurenceofChar
     {
@@ -19,32 +19,32 @@ namespace AutomationDemo
             {
                 int Count = 0;
                 for (int j = i; j < arr.Length; j++)
-                    {
+                {
                     for (int k = 0; k < sb.Length; k++)
                     {
                         if (arr[i] == sb[k])
                             break;
                         else
+                        {
+                            if (arr[i] == arr[j])
                             {
-                                if (arr[i] == arr[j])
-                                {
-                                    //char c = arr[i];
-                                    sb.Append(arr[i]);
-                                    Count = Count + 1;
-                                }
-                                
+                                //char c = arr[i];
+                                sb.Append(arr[i]);
+                                Count = Count + 1;
                             }
+
                         }
-                    
                     }
+
+                }
 
                 Console.WriteLine(arr[i] + " - " + Count);
 
             }
         }
-           
+
         public static void Main(string[] args)
-        { 
+        {
             CountChar("abac cdef");
         }
     }

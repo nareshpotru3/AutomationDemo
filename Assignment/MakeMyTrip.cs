@@ -10,7 +10,7 @@ using OpenQA.Selenium.DevTools.V128.Browser;
 using OpenQA.Selenium.Support.UI;
 using SeleniumExtras.WaitHelpers;
 
-namespace AutomationDemo
+namespace AutomationDemo.Assignment
 {
     internal class MakeMyTrip
     {
@@ -26,6 +26,7 @@ namespace AutomationDemo
             Thread.Sleep(2000);
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(20));
             wait.PollingInterval = TimeSpan.FromMilliseconds(200);
+            
             wait.Until(ExpectedConditions.ElementToBeClickable(By.XPath("//span[@class='commonModal__close']"))).Click();
 
             DeptDate("02/03/2025", "03/22/2025");
@@ -120,6 +121,6 @@ namespace AutomationDemo
             //        }
             //}
         }
-   }
+    }
 }
 

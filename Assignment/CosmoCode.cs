@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace AutomationDemo
+namespace AutomationDemo.Assignment
 {
     internal class CosmoCode
     {
         public static void Main(string[] args)
-        {   
+        {
             //Chrome options
             ChromeOptions options = new ChromeOptions();
             options.AddArgument("strat-maximized");
@@ -26,18 +26,18 @@ namespace AutomationDemo
             IList<IWebElement> ListOfCountries = driver.FindElements(By.XPath("//table[@id='countries']//tr"));
             int i = 1;
             string inCountry = "Nepal";
-            
+
             foreach (IWebElement element in ListOfCountries)
             {
                 //if (ListOfCountries.Count == i - 1)
                 //    break;
                 //Get Contry name for each record in table
-               
-                IWebElement country = driver.FindElement(By.XPath("//table[@id='countries']//tr["+i+"]/td[2]"));
+
+                IWebElement country = driver.FindElement(By.XPath("//table[@id='countries']//tr[" + i + "]/td[2]"));
                 for (int j = 3; j <= 5; j++)
-                { 
+                {
                     IWebElement header = driver.FindElement(By.XPath("//table[@id='countries']//tr[1]/td[" + j + "]"));
-                    IWebElement cap = driver.FindElement(By.XPath("//table[@id='countries']//tr["+i+"]/td["+j+"]"));
+                    IWebElement cap = driver.FindElement(By.XPath("//table[@id='countries']//tr[" + i + "]/td[" + j + "]"));
                     Console.Write(country.Text + " " + header.Text + " is----" + cap.Text + "    ");
                     if (j == 5)
                         Console.WriteLine(" ");

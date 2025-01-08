@@ -1,17 +1,16 @@
 ﻿using System;
 
-namespace AutomationDemo
+namespace AutomationDemo.CodingQuestions
 {
     internal class RevString
-    {   
-        public static void RevStr(string rev) 
+    {
+        public static void RevStr(string rev)
         {
             char[] arr = rev.ToCharArray();
-            int j = 0;
-            for (int i = arr.Length - 1; i >= 1; i--)
+            for (int i = 0, j = rev.Length - 1; i < j; i++, j--)
             {
                 arr[j] = rev[i];
-                j += 1;
+                arr[i] = rev[j];
             }
             Console.WriteLine(arr);
         }

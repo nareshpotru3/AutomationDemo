@@ -10,7 +10,7 @@ using SeleniumExtras.WaitHelpers;
 using OpenQA.Selenium.Interactions;
 
 
-namespace AutomationDemo
+namespace AutomationDemo.Assignment
 {
 
     internal class Golf
@@ -24,6 +24,7 @@ namespace AutomationDemo
 
             IWebDriver driver1 = new ChromeDriver(co);
             driver1.Navigate().GoToUrl("https://www.americangolf.co.uk/");
+            
             //WebDriverWait wait = new WebDriverWait(driver1, TimeSpan.FromSeconds(10));
             //wait.Until(ExpectedConditions.ElementIsVisible(By.ClassName("termly-styles-message-e9e76f termly-styles-message-a323da")));
 
@@ -37,7 +38,7 @@ namespace AutomationDemo
 
             //Input field --Golf
             Actions a = new Actions(driver1);
-            IWebElement search =  driver1.FindElement(By.Id("q"));
+            IWebElement search = driver1.FindElement(By.Id("q"));
             //search.SendKeys("golf");
             //a.MoveToElement(search);
             search.SendKeys("golf");
@@ -53,15 +54,15 @@ namespace AutomationDemo
 
             IList<IWebElement> List = driver1.FindElements(By.XPath("//div[@class='refinement categoryId']//a[@class='listingchange']//span[@class='refinement-name']"));
             string textoflement = "Putters";
-            foreach(var element11 in List)
+            foreach (var element11 in List)
             {
-                if(element11.Text == textoflement)
+                if (element11.Text == textoflement)
                 {
                     Thread.Sleep(500);
                     Console.WriteLine("Selected" + element11.Text);
                     element11.Click();
                     break;
-                   
+
                 }
                 //Console.WriteLine(txt);
             }
@@ -72,4 +73,4 @@ namespace AutomationDemo
         }
     }
 }
-    
+

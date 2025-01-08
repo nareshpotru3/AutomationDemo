@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 
-namespace AutomationDemo
+namespace AutomationDemo.Assignment
 {
     internal class News18
     {
@@ -21,8 +21,8 @@ namespace AutomationDemo
             IList<IWebElement> list = driver.FindElements(By.XPath("//div[@class='jsx-3ee703561b303a3f trndttl']"));
             foreach (var text in list)
             {
-               // var eletext = text.GetAttribute("class");
-                var Text = text.Text;                
+                // var eletext = text.GetAttribute("class");
+                var Text = text.Text;
                 Console.WriteLine(Text);
             }
         }
