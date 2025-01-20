@@ -2,8 +2,23 @@
 
 namespace AutomationDemo
 {
-    internal class RevString
-    {   
+    internal class RevString : BaseForRevString
+    {
+        public new int VirMeth(int a, int b)
+        {
+            int res = a - b;
+            return res;
+        }
+        public override int absmeth(int a, int b)
+        {
+            int res = a % b;
+            return res;
+        }
+        public override int absmeth1(int a, int b)
+        {
+            return a % b;
+        }
+
         public static void RevStr(string rev) 
         {
             char[] arr = rev.ToCharArray();

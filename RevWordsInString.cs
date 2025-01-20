@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AutomationDemo
 {
-    internal class RevWordsInString
+    static internal class RevWordsInString
     {
         public static void ReverseWords(string str)
         {
